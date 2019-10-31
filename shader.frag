@@ -32,7 +32,9 @@ void main() {
       vec2 offs = vec2(x, y);
       float d = length(gv + offs);
       float r = sin(p - length(4.0 * uv)) / 2.0 + 0.5;
-      c += vec3(step(d, r) * 0.5);
+      c.rg *= rotate((-p + r) / 16.0);
+      c += vec3(step(d, r));
+      c.rgb = vec3(1.0) - c.rgb;
     }
   }
 
