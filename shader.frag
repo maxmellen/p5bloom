@@ -23,7 +23,7 @@ void main() {
   vec2 gv = fract(uv + 0.5) - 0.5;
 
   c.rg = gv.xy;
-  // c.b = gv.x + gv.y;
+  c.b = gv.x + gv.y;
 
   float p = uTime * TWO_PI / 8.0;
 
